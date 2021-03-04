@@ -57,6 +57,12 @@ public class Account {
 		
 		return transaction;
 	}
+	
+	private String formatterDate(LocalDateTime date) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dia/mes/anoo Hora:minutos:segundos");
+		
+		return date.format(formatter);
+	}
 }
 
 
